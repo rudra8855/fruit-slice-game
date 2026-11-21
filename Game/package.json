@@ -1,0 +1,20 @@
+{
+  "name": "fruit-blade-frenzy",
+  "version": "1.0.0",
+  "description": "A polished HTML5 fruit-slicing arcade mini-game built with Canvas2D, CSS3, and Web Audio API.",
+  "scripts": {
+    "build": "node build.js",
+    "test": "node verify.js",
+    "start": "node -e \"const http=require('http'), fs=require('fs'), path=require('path'); const mime={'.html':'text/html','.css':'text/css','.js':'application/javascript','.json':'application/json'}; http.createServer((req,res)=>{ let f = path.join(__dirname, req.url === '/' ? 'index.html' : req.url); if(fs.existsSync(f) && !fs.statSync(f).isDirectory()){ res.writeHead(200, {'Content-Type': mime[path.extname(f)] || 'text/plain'}); fs.createReadStream(f).pipe(res); } else { res.writeHead(404); res.end('Not Found'); } }).listen(3000, ()=>console.log('Serving on http://localhost:3000'));\""
+  },
+  "keywords": [
+    "game",
+    "html5",
+    "canvas",
+    "arcade",
+    "fruit-ninja-style",
+    "web-audio"
+  ],
+  "author": "Fruit Blade Frenzy Dev",
+  "license": "MIT"
+}
